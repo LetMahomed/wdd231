@@ -1,0 +1,220 @@
+body {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0; /* Remove default margin */
+    background-color: #fefae0;
+}
+
+header {
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Center vertically within the header */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+img {
+    width: 100px; /* Adjust the size of the image */
+    height: auto;
+    margin-right: 10px; /* Space between the image and the name */
+    padding-top: 30px;
+    padding-right: 50px;
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+}
+
+nav {
+    background-color: #a3b18a; /* Background color for the nav */
+    padding: 15px; /* Padding around the nav items */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text inside nav */
+}
+
+nav a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Space between links */
+    padding: 10px 15px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    background-color: #3a5a40; /* Darker shade on hover */
+}
+
+.container {
+    display: flex; /* Flexbox for layout */
+    width: 94%; /* Full width of the page */
+    margin-top: 20px; /* Space above the container */
+    padding: 0 15px; /* Padding on the left and right */
+    box-sizing: border-box; /* Include padding in width calculation */
+    
+}
+
+.main-content {
+    flex: 2; /* 2/3 of the container */
+    padding: 20px; /* Padding inside main content */
+    background-color: #ccd5ae; /* Background color */
+    margin-right: 10px; /* Optional margin between sections */
+    border-radius: 5px; /* Rounded corners */
+
+}
+
+h2 {
+    width: 92%;
+    text-align: center; /* Centers the text horizontally */
+    padding: 30px; /* Padding inside sidebar */
+    background-color: #588157; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    color: #344e41;
+}
+h3 {
+    width: 86%;
+    text-align: center; /* Centers the text horizontally */
+    padding: 30px; /* Padding inside sidebar */
+    background-color: #588157; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    color: #344e41;
+
+}
+h4 {
+    width: 95%;
+    text-align: center; /* Centers the text horizontally */
+    background-color: #588157; /* Background color */
+    padding: 30px; /* Padding inside sidebar */
+    border-radius: 5px; /* Rounded corners */
+    color: #344e41;
+
+}
+
+
+p {
+    text-align: center; /* Centers the text horizontally */
+}
+
+.sidebar {
+    flex: 1; /* 1/3 of the container */
+    padding: 20px; /* Padding inside sidebar */
+    background-color: #ccd5ae; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+
+}
+
+.sidebar-image {
+    width: 100%; /* Full width of sidebar */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.full-width-section {
+    width: 92%; /* Full width */
+    padding: 20px; /* Same left and right padding as above */
+    background-color: #e9edc9; /* Background color */
+    margin-top: 20px; /* Space above the section */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.links {
+    margin-bottom: 20px; /* Space below the link group */
+    display: flex; /* Align links horizontally */
+    justify-content: center; /* Center links */
+    
+}
+
+.links a {
+    margin: 0 15px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    color: #3a5a40; /* Link color */
+    transition: color 0.3s; /* Smooth transition */
+    padding-inline: 40px; /* Padding inside sidebar */
+    background-color: #ccd5ae; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    
+}
+
+.links a:hover {
+    background-color: #3a5a40; /* Color on hover */
+    color: #fefae0;
+}
+
+.more-links {
+    display: flex; /* Align more links in a flex container */
+    flex-wrap: wrap; /* Allow wrapping to create multiple rows */
+    justify-content: center; /* Center the links */
+    
+}
+
+.more-links a {
+    width: calc(33.33% - 10px); /* Each link takes up 1/3 of the row minus margin */
+    margin: 5px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    color: #3a5a40; /* Color for more links */
+    transition: color 0.3s; /* Smooth transition */
+    text-align: center; /* Center text in links */
+    background-color: #ccd5ae; /* Background color */
+    padding: 10px; /* Padding inside sidebar */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.more-links a:hover {
+    background-color: #3a5a40; /* Color on hover */
+    color: #fefae0;
+}
+
+footer {
+    background-color: #a3b18a; /* Background color for the footer */
+    padding: 20px; /* Padding around the footer */
+    text-align: center; /* Center text */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.footer-content {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.flag-container {
+    margin-left: 5px; /* Space between text and flag */
+}
+
+.flag {
+    width: 30px; /* Adjust flag size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#last-modified {
+    margin-top: 10px; /* Space above the last modified date */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        width: 100%; /* Full width */
+    }
+
+    .main-content {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Space below main content */
+    }
+
+    .sidebar {
+        margin-bottom: 20px; /* Space below sidebar */
+    }
+
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+        padding: 10px; /* Adjust padding */
+    }
+
+    nav a {
+        margin: 5px 0; /* Space between nav links */
+    }
+}

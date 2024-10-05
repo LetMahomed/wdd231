@@ -1,0 +1,71 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Montserrat, Afacad Flux;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e8e8e4;
+  }
+  
+  header {
+    text-align: center;
+    color: #34a0a4;
+    margin-bottom: 30px;
+  }
+  
+  #cards {
+    display: grid;
+    gap: 20px;
+  }
+  
+  section {
+    background-color: #ece4db;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #1a759f;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  p {
+    color: #1e6091;
+    margin: 5px 0;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #168aad;
+  }
+  
+  @media (max-width: 767px) {
+    #cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    #cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  

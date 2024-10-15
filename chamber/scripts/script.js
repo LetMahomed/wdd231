@@ -1,75 +1,62 @@
-const toggleButton = document.getElementById('dark-mode-toggle');
-const toggleViewButton = document.getElementById('toggle-view');
-const membersContainer = document.getElementById('members-container');
+// Weather Information Elements
+const currentTemp = document.querySelector('.current-weather .weather-details p:nth-child(1)');
+const weatherCondition = document.querySelector('.current-weather .weather-details p:nth-child(2)');
+const forecastContainer = document.querySelector('.weather-forecast');
 
-async function fetchMembers() {
-    const response = await fetch('scripts/members.json');
-    const members = await response.json();
-    displayMembers(members);
-}
-
-function displayMembers(members) {
-    membersContainer.innerHTML = ''; 
-    members.forEach(member => {
-        const memberCard = document.createElement('div');
-        memberCard.classList.add('member-card');
-
-        memberCard.innerHTML = `
-            <img src="${member.image}" alt="${member.name} Logo">
-            <h4>${member.name}</h4>
-            <p><strong>Address:</strong> ${member.address}</p>
-            <p><strong>Phone:</strong> ${member.phone}</p>
-            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
-        `;
-        
-        membersContainer.appendChild(memberCard);
-    });
-}
+// API Key and City
+const API_KEY = '99d51f732bb1bfb3d0731d658c4f83c8'; // Replace with your OpenWeatherMap API key
+const city = 'Cabo Frio,BR'; // Chamber location
 
 async function fetchWeather() {
-    const apiKey = '99d51f732bb1bfb3d0731d658c4f83c8'; // Replace with your OpenWeatherMap API key
-    const city = 'Cabo Frio,BR'; // Chamber location
-    const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
     try {
         const response = await fetch(weatherApiUrl);
+        if (!response.ok) throw new Error('Error fetching weather data');
         const data = await response.json();
         displayCurrentWeather(data);
-        fetchForecast(); // Call forecast function
+        fetchForecast(); // Fetch the forecast after getting current weather
     } catch (error) {
-        console.error('Error fetching weather data:', error);
+        console.error(error);
     }
 }
 
 function displayCurrentWeather(data) {
-    const currentTemp = data.main.temp;
+    const currentTemperature = data.main.temp;
     const weatherDescription = data.weather[0].description;
-    const weatherContainer = document.querySelector('.current-weather .weather-details');
+    const highTemp = data.main.temp_max;
+    const lowTemp = data.main.temp_min;
+    const humidity = data.main.humidity;
+    const sunriseTime = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+    const sunsetTime = new Date(data.sys.sunset * 1000).toLocaleTimeString();
 
-    weatherContainer.innerHTML = `
-        <p><strong>Temperature:</strong> ${currentTemp}°C</p>
-        <p><strong>Condition:</strong> ${weatherDescription}</p>
-    `;
+    currentTemp.innerHTML = `<strong>Temperature:</strong> ${currentTemperature}°C`;
+    weatherCondition.innerHTML = `<strong>Condition:</strong> ${weatherDescription}`;
+    document.querySelector('.current-weather .weather-details .high').innerHTML = `<strong>High:</strong> ${highTemp}°C`;
+    document.querySelector('.current-weather .weather-details .low').innerHTML = `<strong>Low:</strong> ${lowTemp}°C`;
+    document.querySelector('.current-weather .weather-details .humidity').innerHTML = `<strong>Humidity:</strong> ${humidity}%`;
+    document.querySelector('.current-weather .weather-details .sunrise').innerHTML = `<strong>Sunrise:</strong> ${sunriseTime}`;
+    document.querySelector('.current-weather .weather-details .sunset').innerHTML = `<strong>Sunset:</strong> ${sunsetTime}`;
 }
 
+
 async function fetchForecast() {
-    const apiKey = '99d51f732bb1bfb3d0731d658c4f83c8'; // Replace with your OpenWeatherMap API key
-    const city = 'Cabo Frio,BR'; // Chamber location
-    const forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+    const forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`;
 
     try {
         const response = await fetch(forecastApiUrl);
+        if (!response.ok) throw new Error('Error fetching forecast data');
         const data = await response.json();
         displayForecast(data);
     } catch (error) {
-        console.error('Error fetching forecast data:', error);
+        console.error(error);
     }
 }
 
 function displayForecast(data) {
-    const forecastContainer = document.querySelector('.weather-forecast');
-    let forecastHtml = '<h3>3-Day Forecast</h3>';
+    let forecastHtml = '<h3>Weather Forecast</h3>';
     
+    // Group forecast data by date
     const days = {};
     data.list.forEach(item => {
         const date = item.dt_txt.split(' ')[0];
@@ -83,52 +70,33 @@ function displayForecast(data) {
     forecastDays.forEach(day => {
         const dailyTemps = days[day].map(item => item.main.temp);
         const avgTemp = (dailyTemps.reduce((a, b) => a + b, 0) / dailyTemps.length).toFixed(1);
-        forecastHtml += `<p>${day}: ${avgTemp}°C</p>`;
+        
+        // Convert date to day of the week
+        const dayOfWeek = new Date(day).toLocaleString('en-US', { weekday: 'long' });
+        forecastHtml += `<p>${dayOfWeek}: ${avgTemp}°C</p>`;
     });
 
     forecastContainer.innerHTML = forecastHtml;
 }
 
-function displaySpotlightMembers(members) {
-    const qualifiedMembers = members.filter(member => member.membership_level === 1 || member.membership_level === 2);
-    const randomMembers = qualifiedMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
-    
-    const spotlightContainer = document.getElementById('member-spotlights');
-    spotlightContainer.innerHTML = '<h2>Member Spotlights</h2>';
-    
-    randomMembers.forEach(member => {
-        spotlightContainer.innerHTML += `
-            <div class="member-spotlight">
-                <img src="${member.image}" alt="${member.name} Logo" />
-                <h3>${member.name}</h3>
-                <p>Phone: ${member.phone}</p>
-                <p>Address: ${member.address}</p>
-                <a href="${member.website}" target="_blank">Visit Website</a>
-                <p>Membership Level: ${member.membership_level === 1 ? 'Gold' : 'Silver'}</p>
-            </div>
-        `;
-    });
-}
 
-document.addEventListener('DOMContentLoaded', async () => {
-    const members = await fetchMembers();
-    displaySpotlightMembers(members);
-
-    fetchWeather(); // Fetch weather data
+document.addEventListener('DOMContentLoaded', () => {
+    fetchWeather();
 
     document.getElementById('current-year').textContent = new Date().getFullYear();
     document.getElementById('last-modified').textContent = document.lastModified;
+});
 
-    // Event listeners for toggles
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const header = document.querySelector('header');
-        const footer = document.querySelector('footer');
-        header.classList.toggle('dark-mode');
-        footer.classList.toggle('dark-mode');
-    });
+const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-    toggleViewButton.addEventListener('click', () => {
-        membersContainer.classList.toggle('list-view');
-    });
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    const header = document.querySelector('header');
+    const navContainer = document.querySelector('.nav-container');
+    const footerContent = document.querySelector('.footer-content');
+
+    header.classList.toggle('dark-mode');
+    navContainer.classList.toggle('dark-mode');
+    footerContent.classList.toggle('dark-mode');
 });

@@ -66,12 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     const courseData = {
-        "CSE 110": { credits: 3, taken: true },
-        "WDD 130": { credits: 3, taken: false },
-        "CSE 111": { credits: 4, taken: true },
-        "CSE 210": { credits: 3, taken: false },
-        "WDD 131": { credits: 3, taken: true },
-        "WDD 231": { credits: 3, taken: false }
+        "CSE 110": { credits: 2, taken: true },
+        "WDD 130": { credits: 2, taken: true },
+        "CSE 111": { credits: 2, taken: true },
+        "CSE 210": { credits: 2, taken: true },
+        "WDD 131": { credits: 2, taken: true },
+        "WDD 231": { credits: 2, taken: true }
     };
     
     courseItems.forEach(course => {

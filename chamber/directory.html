@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Chamber of Commerce | Cabo Frio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/yourimage.jpg" />
+    <meta property="og:url" content="https://letmahomed.github.io/wdd231/" />
+    <meta name="description" content="Welcome to the Chamber of Commerce in Cabo Frio">
+    <meta name="author" content="Leticia Mahomed">
+    <link rel="icon" href="images/favicon (1).ico">
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <title>Chamber of Commerce</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/beach.jpg" alt="Cabo Frio Chamber of Commerce Logo">
+                <div class="site-name">
+                    <h1>Cabo Frio</h1>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://letmahomed.github.io/wdd231/">Home</a></li>
+                    <li><a href="https://letmahomed.github.io/wdd231/chamber/directory.html">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="hero-image">
+        <img src="images/cabo frio.webp" alt="Cabo Frio beach scene">
+    </div>
+    <section class="home-section">
+        <h2>Home</h2>
+        <div class="columns">
+            <div class="column events">
+                <h3>Events</h3>
+                <p>Cabo Frio hosts a variety of vibrant events throughout the year, celebrating its rich culture and stunning natural beauty. One of the most popular is the Cabo Frio Carnival, where colorful parades, samba music, and street parties fill the city with excitement. The Festa de São Benedito in January showcases local traditions, featuring religious processions and cultural performances. Additionally, the Cabo Frio Jazz Festival attracts music lovers with performances by renowned artists in a scenic beach setting. The annual Cabo Frio International Film Festival also brings together filmmakers and cinema enthusiasts, showcasing a diverse selection of films. Each event offers a unique glimpse into the local culture and the lively spirit of this beautiful coastal city.</p>
+            </div>
+            <div class="column current-weather">
+                <h3>Current Weather</h3>
+                <div class="weather-info">
+                    <img src="images/weather.png" alt="Weather Icon" class="weather-icon">
+                    <div class="weather-details">
+                        <p><strong>Temperature:</strong> 72°F</p>
+                        <p><strong>Condition:</strong> Sunny</p>
+                        <p><strong>Humidity:</strong> 45%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column weather-forecast">
+                <h3>Weather Forecast</h3>
+                <p>Weather forecast details.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="members-section">
+        <h4>Our Members</h4>
+        <div id="members-container" class="grid-view"></div>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>Chamber of Commerce</h2>
+                <p>Cabo Frio </p>
+                <p>Cell: (22) 99924-7233</p>
+            </div>
+            <div class="footer-center">
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/yt.png" alt="YouTube">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="images/tt.png" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="images/in.png" alt="LinkedIn">
+                </a>
+            </div>
+            <div class="footer-right">
+                <p>WDD231 Class Project</p>
+                <p>Leticia Mahomed</p>
+            </div>
+        </div>
+        <p>&copy; <span id="current-year"></span>. All rights reserved.</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

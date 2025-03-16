@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Nana Kids",
+        "address": "Cabo Frio - RJ, 28906-240",
+        "phone": "(22) 99713-2576",
+        "website": "https://www.instagram.com/nana.kids.cf/",
+        "image": "images/nanakids.jpeg",
+        "membership_level": 1
+    },
+    {
+        "name": "Paelo",
+        "address": "Cabo Frio - RJ, 28900-000",
+        "phone": "(22) 2040-7223",
+        "website": "https://paelo.com.br/",
+        "image": "images/paelo.png",
+        "membership_level": 2
+    },
+    {
+        "name": "Brigadeiria da Vovó",
+        "address": "Cabo Frio - RJ, 28907-080",
+        "phone": "(22) 98817-4810",
+        "website": "https://www.instagram.com/brigaderiadavovocf/",
+        "image": "images/brigadeiria.jpeg",
+        "membership_level": 2
+    },
+    {
+        "name": "Sem Frescura",
+        "address": "Cabo Frio - RJ, 28908-200",
+        "phone": "(22) 98168-3529",
+        "website": "https://www.instagram.com/semfrescuraburger/",
+        "image": "images/semfrescura.png",
+        "membership_level": 3
+    },
+    {
+        "name": "Iconiko",
+        "address": "Cabo Frio - RJ, 28906-115",
+        "phone": "(22) 3343-7229",
+        "website": "https://www.iconiko.com.br/",
+        "image": "images/iconiko.png",
+        "membership_level": 1
+    },
+    {
+        "name": "Blow Up",
+        "address": "Cabo Frio - RJ, 28905-220",
+        "phone": "(22) 2643-6870",
+        "website": "https://www.instagram.com/useblowup/",
+        "image": "images/blowup.jpeg",
+        "membership_level": 3
+    },
+    {
+        "name": "Oliver's",
+        "address": "Cabo Frio - RJ, 28906-270",
+        "phone": "0800 591 0617",
+        "website": "https://www.oliverspizza.com.br/bio",
+        "image": "images/olivers.png",
+        "membership_level": 2
+    }
+]

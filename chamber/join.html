@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join the Chamber</title>
+  <meta property="og:title" content="Chamber of Commerce All the best business of Cabo Frio" />
+  <meta name="description" content="Welcome to the Chamber of Commerce in Cabo Frio">
+  <meta name="author" content="Leticia Mahomed">
+  <link rel="icon" href="images/favicon1.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="wdd231/chamber/images/beach.jpg" />
+  <meta property="og:url" content="https://letmahomed.github.io/wdd231/" />
+  <title>Join our Chamber</title>
+
   <link rel="stylesheet" href="styles/join.css" />
 </head>
 <body>
   <header>
     <div class="nav-container">
       <div class="logo">
-        <img src="images/beach.jpg" alt="Cabo Frio Chamber of Commerce Logo" width="100px" />
+        <img src="images/beach.jpg" alt="Cabo Frio Chamber of Commerce Logo" width="100"/>
         <div class="site-name">
-          <h1>Cabo Frio</h1>
+          <h1>Join our Chamber</h1>
           <p>Chamber of Commerce</p>
         </div>
       </div>
@@ -63,13 +71,14 @@
 
       <label>
         Membership Level:
-        <select id="membership-level" name="membership-level" required>
+        <select id="membership-level" name="membershipLevel" required>
+          <option value="" disabled selected>Select a membership level</option>
           <option value="NP Membership">NP Membership (Non-profit)</option>
           <option value="Bronze Membership">Bronze Membership</option>
           <option value="Silver Membership">Silver Membership</option>
           <option value="Gold Membership">Gold Membership</option>
         </select>
-      </label>
+        
 
       <label>
         Business/Organization Description:
@@ -154,6 +163,15 @@
     </div>
   </div>
   
+  <footer>
+    <div class="footer-container">
+      <p>&copy; <span id="year"></span> Cabo Frio Chamber of Commerce</p>
+      <p>Leticia Mahomed | WDD 231 Project</p>
+      <p><a href="https://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+    </div>
+  </footer>
+
+
   <script src="scripts/join.js" defer></script>
 </body>
 </html>

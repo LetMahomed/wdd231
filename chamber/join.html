@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join the Chamber</title>
+  <link rel="stylesheet" href="styles/join.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/beach.jpg" alt="Cabo Frio Chamber of Commerce Logo" width="100px" />
+        <div class="site-name">
+          <h1>Cabo Frio</h1>
+          <p>Chamber of Commerce</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="https://letmahomed.github.io/wdd231/">Home</a></li>
+          <li><a href="https://letmahomed.github.io/wdd231/chamber/directory.html">Directory</a></li>
+          <li><a href="#">Join</a></li>
+          <li><a href="#">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Join the Chamber of Commerce</h1>
+
+    <form id="join-form">
+      <label>
+        First Name:
+        <input type="text" id="first-name" name="first-name" required autocomplete="given-name" placeholder="Your first name"/>
+      </label>
+
+      <label>
+        Last Name:
+        <input type="text" id="last-name" name="last-name" required autocomplete="family-name" placeholder="Your last name"/>
+      </label>
+
+      <label>
+        Organizational Title:
+        <input type="text" id="org-title" name="title" required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Title must be at least 7 characters and only contain letters, spaces, or hyphens."/>
+      </label>
+
+      <label>
+        Email Address:
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com"/>
+      </label>
+
+      <label>
+        Mobile Phone:
+        <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(123) 456-7890"/>
+      </label>
+
+      <label>
+        Business/Organization Name:
+        <input type="text" id="org-name" name="org-name" required autocomplete="organization" placeholder="Your business/organization name"/>
+      </label>
+
+      <label>
+        Membership Level:
+        <select id="membership-level" name="membership-level" required>
+          <option value="NP Membership">NP Membership (Non-profit)</option>
+          <option value="Bronze Membership">Bronze Membership</option>
+          <option value="Silver Membership">Silver Membership</option>
+          <option value="Gold Membership">Gold Membership</option>
+        </select>
+      </label>
+
+      <label>
+        Business/Organization Description:
+        <textarea id="description" name="description" required placeholder="Describe your business/organization"></textarea>
+      </label>
+
+      <input type="hidden" name="timestamp" id="timestamp"/>
+
+      <input type="submit" value="Submit Application"/>
+    </form>
+
+    <section id="membership-cards">
+      <div class="card" id="np-card">
+        <h3>NP Membership</h3>
+        <p>No Fee | Non-profit Organization</p>
+        <a href="#np-modal" class="card-link" data-modal="np-modal">Learn More</a>
+      </div>
+      <div class="card" id="bronze-card">
+        <h3>Bronze Membership</h3>
+        <p>Starting at $100</p>
+        <a href="#bronze-modal" class="card-link" data-modal="bronze-modal">Learn More</a>
+      </div>
+      <div class="card" id="silver-card">
+        <h3>Silver Membership</h3>
+        <p>Starting at $200</p>
+        <a href="#silver-modal" class="card-link" data-modal="silver-modal">Learn More</a>
+      </div>
+      <div class="card" id="gold-card">
+        <h3>Gold Membership</h3>
+        <p>Starting at $500</p>
+        <a href="#gold-modal" class="card-link" data-modal="gold-modal">Learn More</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal" id="np-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>NP Membership Benefits</h2>
+      <ul>
+        <li>No fee for Non-Profit Organizations</li>
+        <li>Access to community events</li>
+        <li>Networking opportunities with local businesses</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="bronze-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Bronze Membership Benefits</h2>
+      <ul>
+        <li>$100 annual fee</li>
+        <li>Spotlight position on the website</li>
+        <li>Discounts to Chamber events</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="silver-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Silver Membership Benefits</h2>
+      <ul>
+        <li>$200 annual fee</li>
+        <li>Special event invitations</li>
+        <li>Priority placement on the website</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="gold-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Gold Membership Benefits</h2>
+      <ul>
+        <li>$500 annual fee</li>
+        <li>Premium advertising and spotlight opportunities</li>
+        <li>Exclusive training sessions and workshops</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script src="data/join.js" defer></script>
+</body>
+</html>

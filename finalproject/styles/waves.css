@@ -1,0 +1,87 @@
+
+    :root {
+      --blue: #0077be;
+      --beige: #f4e1c1;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--beige);
+      color: #222;
+    }
+
+    header {
+      background-color: var(--blue);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .hero h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+    }
+
+    #map {
+      height: 400px;
+      width: 100%;
+      margin: 2rem 0;
+    }
+
+    .content {
+      padding: 1rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      background-color: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .map-section {
+        display: flex;
+        gap: 2rem;
+      }
+
+      #map {
+        flex: 2;
+        height: 500px;
+      }
+
+      .spot-info {
+        flex: 1;
+      }
+    }
+

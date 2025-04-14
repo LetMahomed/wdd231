@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surf Scout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles/waves.css"> 
+
+  
+</head>
+<body>
+  <header>
+    <h1>Surf Scout</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Map</a>
+      <a href="#">About</a>
+      <a href="#">Help</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Find the Best Waves Near You</h2>
+    <p>Check real-time surf conditions and discover new spots</p>
+  </section>
+
+  <main class="content">
+    <section class="section">
+        <h3>Site Purpose</h3>
+        <p>
+          Surf Scout is designed to help surfers and outdoor adventurers find the best locations and current conditions for their next trip. The site provides real-time wave data, weather updates, tide information, and an interactive map of surf spots and hiking areas. Whether you're chasing swells or planning a scenic coastal hike, Surf Scout makes it easy to plan with confidence.
+        </p>
+      </section>
+    <section class="map-section">
+      <div id="map"></div>
+      <div class="spot-info">
+        <h3>Featured Surf Spot</h3>
+        <p><strong>Location:</strong> Ocean Beach, San Francisco</p>
+        <p><strong>Conditions:</strong> 4-6 ft waves, offshore winds</p>
+        <p><strong>Notes:</strong> Intermediate-friendly, watch for strong currents</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Common Questions</h3>
+      <ul>
+        <li>Where can I find the best waves today near Santa Cruz?</li>
+        <li>Are there beginner-friendly surf spots in Southern California?</li>
+        <li>Can I check tide conditions and wind speed before I head out?</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>About Surf Scout</h3>
+      <p>Surf Scout helps surfers and hikers find reliable, real-time wave and weather info with an easy-to-use interactive map.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Surf Scout | Built for Surf & Outdoor Enthusiasts</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([37.7749, -122.4194], 10); // San Francisco default
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([37.7599, -122.5102]) // Ocean Beach
+      .addTo(map)
+      .bindPopup('Ocean Beach - 4-6ft, Offshore Wind')
+      .openPopup();
+  </script>
+</body>
+</html>

@@ -1,41 +1,48 @@
-const container = document.getElementById('card-container');
-const message = document.getElementById('visit-message');
-
-async function loadCards() {
-  const response = await fetch('data/places.json');
-  const places = await response.json();
-
-  places.forEach(place => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <h2>${place.name}</h2>
-      <figure><img src="${place.image}" alt="${place.name}"></figure>
-      <address>${place.address}</address>
-      <p>${place.description}</p>
-      <button>Learn more</button>
-    `;
-    container.appendChild(card);
+document.addEventListener("DOMContentLoaded", () => {
+    displayVisitMessage();
+    loadCards();
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent = document.lastModified;
   });
-}
-
-function checkVisit() {
-  const now = Date.now();
-  const lastVisit = localStorage.getItem('lastVisit');
-
-  if (!lastVisit) {
-    message.textContent = 'Welcome! Let us know if you have any questions.';
-  } else {
-    const diff = Math.floor((now - Number(lastVisit)) / (1000 * 60 * 60 * 24));
-    if (diff < 1) {
-      message.textContent = 'Back so soon! Awesome!';
+  
+  function displayVisitMessage() {
+    const messageEl = document.getElementById("visit-message");
+    const lastVisit = localStorage.getItem("lastVisit");
+    const now = Date.now();
+  
+    if (!lastVisit) {
+      messageEl.textContent = "Welcome! Let us know if you have any questions.";
     } else {
-      message.textContent = `You last visited ${diff} day${diff === 1 ? '' : 's'} ago.`;
+      const days = Math.floor((now - Number(lastVisit)) / (1000 * 60 * 60 * 24));
+      if (days < 1) {
+        messageEl.textContent = "Back so soon! Awesome!";
+      } else if (days === 1) {
+        messageEl.textContent = "You last visited 1 day ago.";
+      } else {
+        messageEl.textContent = `You last visited ${days} days ago.`;
+      }
     }
+  
+    localStorage.setItem("lastVisit", now.toString());
   }
-
-  localStorage.setItem('lastVisit', now);
-}
-
-loadCards();
-checkVisit();
+  
+  async function loadCards() {
+    const res = await fetch("scripts/discover.json");
+    const data = await res.json();
+    const container = document.getElementById("card-container");
+  
+    data.items.forEach((item, index) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.style.gridArea = `card${index + 1}`;
+      card.innerHTML = `
+        <h2>${item.name}</h2>
+        <figure><img src="${item.image}" alt="${item.name}"></figure>
+        <address>${item.address}</address>
+        <p>${item.description}</p>
+        <button>Learn More</button>
+      `;
+      container.appendChild(card);
+    });
+  }
+  

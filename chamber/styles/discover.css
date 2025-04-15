@@ -1,11 +1,47 @@
-.cards-grid {
+:root {
+    --primary: #0077be;
+    --accent: #f4e1c1;
+    --text-dark: #222;
+    --bg-light: #fdfdfd;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+  }
+  
+  h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+  }
+  
+
+  nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .cards-grid {
     display: grid;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
     gap: 1rem;
     padding: 1rem;
   }
   
   .card {
-    background-color: #f0f0f0;
+    background-color: var(--accent);
     padding: 1rem;
     border-radius: 8px;
     display: grid;
@@ -16,11 +52,11 @@
       "description"
       "button";
     gap: 0.5rem;
-    transition: transform 0.3s ease;
   }
   
   .card h2 {
     grid-area: title;
+    margin: 0;
   }
   
   .card figure {
@@ -45,9 +81,9 @@
   
   .card button {
     grid-area: button;
-    padding: 0.5rem;
-    background-color: #0077cc;
+    background-color: var(--primary);
     color: white;
+    padding: 0.5rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -56,12 +92,20 @@
   @media (min-width: 641px) {
     .cards-grid {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
     }
   }
   
   @media (min-width: 1025px) {
     .cards-grid {
       grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "card1 card2 card3 card4"
+        "card5 card6 card7 card8";
     }
   }
   
@@ -69,6 +113,7 @@
     .card img:hover {
       transform: scale(1.05);
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
     }
   }
   
@@ -76,6 +121,71 @@
     background-color: #e0f7fa;
     padding: 1rem;
     margin: 1rem;
-    border-left: 4px solid #0077cc;
+    border-left: 5px solid var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+  
+  footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+   img {
+    width: 80px; 
+    height: 80px;
+    margin-right: 10px;
+   }
+   header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 8px;
+  }
+  
+  .site-name h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+  }
+  
+  .site-name p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
   }
   

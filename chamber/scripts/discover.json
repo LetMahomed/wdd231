@@ -1,51 +1,53 @@
-[
-    {
-      "name": "Praia do Forte",
-      "address": "Av. Nilo Peçanha, Cabo Frio - RJ",
-      "description": "A beautiful white sand beach, perfect for surfing and sunbathing.",
-      "image": "images/forte.webp"
-    },
-    {
-      "name": "Ilha do Japonês",
-      "address": "R. Ilha do Japonês, Cabo Frio - RJ",
-      "description": "A calm and scenic island spot for paddling and relaxing.",
-      "image": "images/japones.webp"
-    },
-    {
-      "name": "Mirante do Morro da Guia",
-      "address": "R. Expedicionários da Pátria, Cabo Frio - RJ",
-      "description": "Panoramic views of Cabo Frio and nearby coastline.",
-      "image": "images/morro.webp"
-    },
-    {
-      "name": "Canal Itajuru",
-      "address": "Av. Assunção, Cabo Frio - RJ",
-      "description": "A lively waterfront area with boats, restaurants, and local culture.",
-      "image": "images/canal.webp"
-    },
-    {
-      "name": "Praia das Conchas",
-      "address": "Peró, Cabo Frio - RJ",
-      "description": "Shell-shaped bay ideal for snorkeling and family visits.",
-      "image": "images/conchas.webp"
-    },
-    {
-      "name": "Rua dos Biquínis",
-      "address": "Rua dos Biquínis, Gamboa, Cabo Frio - RJ",
-      "description": "Famous shopping street specializing in beachwear.",
-      "image": "images/biquinis.webp"
-    },
-    {
-      "name": "Forte São Mateus",
-      "address": "Praia do Forte, Cabo Frio - RJ",
-      "description": "Historic 17th-century fort with stunning views.",
-      "image": "images/forte-sao-mateus.webp"
-    },
-    {
-      "name": "Boulevard Canal",
-      "address": "Boulevard Canal, Cabo Frio - RJ",
-      "description": "Vibrant nightlife and dining along the water.",
-      "image": "images/boulevard.webp"
-    }
-  ]
+{
+    "items": [
+      {
+        "name": "Praia do Forte",
+        "image": "images/forte.jpg",
+        "address": "Av. do Contorno, Cabo Frio - RJ",
+        "description": "Famous for its clear waters and white sand."
+      },
+      {
+        "name": "Ilha do Japonês",
+        "image": "images/ilha.jpg",
+        "address": "R. dos Passaros, Cabo Frio - RJ",
+        "description": "Calm water beach, perfect for families."
+      },
+      {
+        "name": "Forte de São Mateus",
+        "image": "images/fort.png",
+        "address": "Praça do Forte, Cabo Frio - RJ",
+        "description": "Historical fort with ocean views."
+      },
+      {
+        "name": "Canal Boulevard",
+        "image": "images/canal.jpg",
+        "address": "Boulevard Canal, Cabo Frio - RJ",
+        "description": "Shops and restaurants along the canal."
+      },
+      {
+        "name": "Casa de Cultura José de Dome",
+        "image": "images/cultura.jpg",
+        "address": "Rua Érico Coelho, 18, Centro",
+        "description": "Art exhibitions and cultural events."
+      },
+      {
+        "name": "Museu do Surf",
+        "image": "images/surf.jpg",
+        "address": "Rua Alex Novelino, Cabo Frio - RJ",
+        "description": "Brazil's only surf museum."
+      },
+      {
+        "name": "Dunas do Peró",
+        "image": "images/dunas.jpg",
+        "address": "Estrada do Guriri, Cabo Frio - RJ",
+        "description": "Stunning natural dunes and trails."
+      },
+      {
+        "name": "Shopping Park Lagos",
+        "image": "images/park.jpg",
+        "address": "Av. Henrique Terra, 1700",
+        "description": "Shopping and entertainment center."
+      }
+    ]
+  }
   

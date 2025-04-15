@@ -4,13 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Surf Scout</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="styles/waves.css"> 
 
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles/waves.css"> 
 </head>
 <body>
   <header>
@@ -30,11 +34,12 @@
 
   <main class="content">
     <section class="section">
-        <h3>Site Purpose</h3>
-        <p>
-          Surf Scout is designed to help surfers and outdoor adventurers find the best locations and current conditions for their next trip. The site provides real-time wave data, weather updates, tide information, and an interactive map of surf spots and hiking areas. Whether you're chasing swells or planning a scenic coastal hike, Surf Scout makes it easy to plan with confidence.
-        </p>
-      </section>
+      <h3>Site Purpose</h3>
+      <p>
+        Surf Scout is designed to help surfers and outdoor adventurers find the best locations and current conditions for their next trip. The site provides real-time wave data, weather updates, tide information, and an interactive map of surf spots and hiking areas.
+      </p>
+    </section>
+
     <section class="map-section">
       <div id="map"></div>
       <div class="spot-info">
@@ -56,7 +61,20 @@
 
     <section class="section">
       <h3>About Surf Scout</h3>
-      <p>Surf Scout helps surfers and hikers find reliable, real-time wave and weather info with an easy-to-use interactive map.</p>
+      <p>
+        Surf Scout helps surfers and hikers find reliable, real-time wave and weather info with an easy-to-use interactive map.
+      </p>
+    </section>
+
+    <!-- Color Scheme & Typography Explanation -->
+    <section class="section theme-info">
+      <h3>Color Scheme</h3>
+      <p><strong>Primary Color:</strong> <span class="color-swatch blue"></span> Blue (#0077be) — used in the header, footer, and as a navigation accent to represent water and trust.</p>
+      <p><strong>Secondary Color:</strong> <span class="color-swatch beige"></span> Beige (#f4e1c1) — used as the background color for the body to create a calm, sandy beach-like tone.</p>
+
+      <h3>Typography</h3>
+      <p><strong>Heading Font:</strong> Poppins — used for all headers (h1, h2, h3) for a bold, modern look.</p>
+      <p><strong>Body Font:</strong> Roboto — used for paragraphs and general text for high readability and clean appearance.</p>
     </section>
   </main>
 
@@ -64,18 +82,8 @@
     <p>&copy; 2025 Surf Scout | Built for Surf & Outdoor Enthusiasts</p>
   </footer>
 
+  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    const map = L.map('map').setView([37.7749, -122.4194], 10); // San Francisco default
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
-
-    L.marker([37.7599, -122.5102]) // Ocean Beach
-      .addTo(map)
-      .bindPopup('Ocean Beach - 4-6ft, Offshore Wind')
-      .openPopup();
-  </script>
+  <script src="scripts/waves.js"></script>
 </body>
 </html>

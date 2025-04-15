@@ -1,0 +1,81 @@
+.cards-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .card {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    display: grid;
+    grid-template-areas:
+      "title"
+      "image"
+      "address"
+      "description"
+      "button";
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .card h2 {
+    grid-area: title;
+  }
+  
+  .card figure {
+    grid-area: image;
+    margin: 0;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .card address {
+    grid-area: address;
+    font-style: normal;
+  }
+  
+  .card p {
+    grid-area: description;
+  }
+  
+  .card button {
+    grid-area: button;
+    padding: 0.5rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 641px) {
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .cards-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (hover: hover) {
+    .card img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .visit-message {
+    background-color: #e0f7fa;
+    padding: 1rem;
+    margin: 1rem;
+    border-left: 4px solid #0077cc;
+  }
+  

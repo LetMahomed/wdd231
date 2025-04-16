@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Ocean Beach",
+    "lat": 37.7599,
+    "lng": -122.511,
+    "skill": "Intermediate",
+    "waves": "4-6 ft",
+    "notes": "Strong currents, offshore winds"
+  },
+  {
+    "id": 2,
+    "name": "Huntington Beach",
+    "lat": 33.6595,
+    "lng": -117.9988,
+    "skill": "Beginner",
+    "waves": "2-4 ft",
+    "notes": "Good for longboarding"
+  },
+  {
+    "id": 3,
+    "name": "Mavericks",
+    "lat": 37.4916,
+    "lng": -122.4961,
+    "skill": "Expert",
+    "waves": "20-60 ft",
+    "notes": "Big wave surfing, dangerous conditions"
+  },
+  {
+    "id": 4,
+    "name": "Trestles",
+    "lat": 33.3847,
+    "lng": -117.5963,
+    "skill": "All Levels",
+    "waves": "3-5 ft",
+    "notes": "Consistent breaks, popular spot"
+  },
+  {
+    "id": 5,
+    "name": "Rincon Point",
+    "lat": 34.3733,
+    "lng": -119.4879,
+    "skill": "Intermediate",
+    "waves": "4-7 ft",
+    "notes": "Long right-hand point break"
+  },
+  {
+    "id": 6,
+    "name": "Santa Cruz – Steamer Lane",
+    "lat": 36.9513,
+    "lng": -122.0251,
+    "skill": "Intermediate",
+    "waves": "3-6 ft",
+    "notes": "Iconic surf location, cliffs nearby"
+  },
+  {
+    "id": 7,
+    "name": "Malibu Surfrider",
+    "lat": 34.033,
+    "lng": -118.678,
+    "skill": "All Levels",
+    "waves": "2-4 ft",
+    "notes": "Crowded, but legendary"
+  },
+  {
+    "id": 8,
+    "name": "Windansea Beach",
+    "lat": 32.8293,
+    "lng": -117.2816,
+    "skill": "Advanced",
+    "waves": "4-6 ft",
+    "notes": "Shore break, rocky bottom"
+  },
+  {
+    "id": 9,
+    "name": "Blacks Beach",
+    "lat": 32.8871,
+    "lng": -117.2528,
+    "skill": "Advanced",
+    "waves": "5-8 ft",
+    "notes": "Powerful surf, steep hike to access"
+  },
+  {
+    "id": 10,
+    "name": "Cardiff Reef",
+    "lat": 33.0221,
+    "lng": -117.2835,
+    "skill": "Beginner",
+    "waves": "2-4 ft",
+    "notes": "Mellow waves, good for longboarding"
+  },
+  {
+    "id": 11,
+    "name": "Pismo Beach",
+    "lat": 35.1428,
+    "lng": -120.6413,
+    "skill": "Beginner",
+    "waves": "2-3 ft",
+    "notes": "Easy access, sandy bottom"
+  },
+  {
+    "id": 12,
+    "name": "Pacific Beach",
+    "lat": 32.7973,
+    "lng": -117.2547,
+    "skill": "All Levels",
+    "waves": "2-5 ft",
+    "notes": "Close to town, consistent conditions"
+  },
+  {
+    "id": 13,
+    "name": "Venice Beach",
+    "lat": 33.985,
+    "lng": -118.4695,
+    "skill": "Beginner",
+    "waves": "2-3 ft",
+    "notes": "Fun vibe, great for learners"
+  },
+  {
+    "id": 14,
+    "name": "La Jolla Shores",
+    "lat": 32.8551,
+    "lng": -117.2566,
+    "skill": "Beginner",
+    "waves": "1-3 ft",
+    "notes": "Gentle waves, popular with surf schools"
+  },
+  {
+    "id": 15,
+    "name": "Dillon Beach",
+    "lat": 38.2481,
+    "lng": -122.9653,
+    "skill": "All Levels",
+    "waves": "3-5 ft",
+    "notes": "Secluded spot, great scenery"
+  }
+]

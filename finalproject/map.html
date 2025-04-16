@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surf Map | Surf Scout</title>
+  <meta name="description" content="Explore an interactive map of top surf locations and outdoor destinations with real-time wave data.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="Surf Map | Surf Scout" />
+  <meta property="og:description" content="Use the Surf Scout map to find nearby surf spots, trailheads, and conditions." />
+  <meta property="og:image" content="images/preview.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/map.html" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles/waves.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Surf Scout</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html" class="active">Map</a>
+      <a href="about.html">About</a>
+      <a href="help.html">Help</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="section">
+      <h2>Interactive Surf Map</h2>
+      <p>Explore real surf spots near you. Click on a marker to view surf conditions, skill levels, and safety notes.</p>
+    </section>
+
+    <section class="map-area">
+      <div id="map" aria-label="Surf locations map"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Surf Scout | Powered by Outdoor Curiosity</p>
+    <a href="attributions.html">Attributions</a>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script type="module" src="scripts/map.js"></script>
+</body>
+</html>

@@ -1,12 +1,11 @@
-// scripts/map.js
 import L from "https://unpkg.com/leaflet@1.9.4/dist/leaflet-src.esm.js";
 
-// Initialize map
-const map = L.map('map').setView([36.7783, -119.4179], 6); // Centered on CA
+// Create and set up the map
+const map = L.map('map').setView([37.7749, -122.4194], 6); // San Francisco area
 
-// Add OpenStreetMap tiles
+// Load tile layer for the map
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
+  attribution: 'Map data © OpenStreetMap contributors'
 }).addTo(map);
 
 // Modal setup
@@ -32,7 +31,7 @@ document.querySelector('.close-button').addEventListener('click', () => {
 // Fetch spots and render
 async function loadSpots() {
   try {
-    const res = await fetch('../data/spots.json');
+    const res = await fetch('scripts/spots.json'); // Correct path to spots.json
     const spots = await res.json();
 
     // Save to localStorage
